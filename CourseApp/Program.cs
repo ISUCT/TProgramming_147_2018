@@ -27,7 +27,7 @@ namespace Matan
             }
 
             Console.WriteLine("Задача B:");
-            
+
             foreach (double i in x)
             {
                 Console.WriteLine($"Для x = {i}\t y = {y(i, a, b):f3}");
