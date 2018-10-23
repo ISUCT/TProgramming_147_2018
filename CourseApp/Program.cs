@@ -8,6 +8,7 @@ namespace CourseApp
                 
         static void Main()
         {
+
             Console.WriteLine();
             Console.WriteLine("Первая часть");
             double a = 0.4;
@@ -31,6 +32,7 @@ namespace CourseApp
 
 
             Console.ReadKey();
+
         }
 
     }
