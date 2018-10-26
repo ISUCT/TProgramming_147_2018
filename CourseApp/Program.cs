@@ -32,10 +32,7 @@ namespace Matan
                     }
 
                     Console.WriteLine("Задача B:");
-                    //for (int i = 0; i < 5; i++)
-                    //{
-                    //    Console.WriteLine($"Для x = {x[i]}\t y = {y(x[i], a, b)}");
-                    //}
+                    
                     foreach (double i in x)
                     {
                         Console.WriteLine($"Для x = {i}\t y = {y1(i)}");
