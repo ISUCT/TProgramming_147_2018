@@ -2,7 +2,7 @@
 
 namespace Matan
 {
-    class Program
+    public class Program
     {
         public static double y(double x, double a, double b)
         {
@@ -30,6 +30,7 @@ namespace Matan
             {
                 Console.WriteLine($"Для x = {i}\t y = {y(i, a, b)}");
             }
+
         }
     }
 }
