@@ -1,3 +1,3 @@
 # Course of c#
 
-Evgenij_Novozhilov
+Mikhail_Titarenko
