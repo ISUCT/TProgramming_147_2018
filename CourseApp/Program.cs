@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CourseApp
+namespace laba2
 {
     class Program
     {
@@ -32,6 +32,7 @@ namespace CourseApp
 
 
             Console.ReadKey();
+
 
         }
 
