@@ -2,7 +2,7 @@
 
 namespace Matan
 {
-    class Program
+    public class Program
     {
         public static double y(double x)
         {
