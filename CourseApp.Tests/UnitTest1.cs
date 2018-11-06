@@ -27,7 +27,7 @@ namespace CourseApp.Tests
         [Fact]
         public void Test4()
         {
-            var res = Program.y(1,25;
+            var res = Program.y(1,25);
             Assert.Equal(0, res);
         }
         [Fact]
