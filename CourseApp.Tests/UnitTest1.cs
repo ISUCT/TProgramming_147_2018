@@ -48,13 +48,7 @@ namespace CourseApp.Test
             var res = Program.y(8, 2, 4);
             Assert.Equal(6.38, res, 2);
         }
-        [Fact]
-        public void Test8()
-        {
-            var res = Program.y(2, 7, 1);
-            Assert.Equal(13.54, res, 2);
-        }
-        [Fact]
+                [Fact]
         public void Test9()
         {
             var res = Program.y(0, 3, 2);
