@@ -31,7 +31,6 @@ namespace laba2
                 formula(z[i], a, b);
             }
 
-
             Console.ReadKey();
         }
 
