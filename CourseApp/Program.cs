@@ -7,7 +7,7 @@ namespace Matem
     {
         public static double y(double x, double a, double b)
         {
-            return (Math.Pow(a * x + b, 1 / 3) / (Math.Log10(x) * Math.Log10(x)));
+            return (Math.Pow(a * x + b, 1 / 3.0) / (Math.Log10(x) * Math.Log10(x)));
         }
 
         static void Main(string[] args)
