@@ -1,24 +1,35 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace CourseApp
 {
-    class Program
+    public class Program
     {
-        static void Main() 
+        public static double y(double x, double a, double b)
+        {  
+         return ((Math.Pow((Math.Pow((x - a), 2)), 1/3.0))) + ((((Math.Pow((Math.Abs(x + b)),1 / 5))) / ((Math.Pow(Math.Pow(x,2) - Math.Pow((a+b),2), 1/5.0)))));
+        }
+         static void Main(string[] args) 
         {
             double a = 0.8;
             double b = 0.4;
-            double y;
-            for (double x = 1.23; x <= 7.23; x = x + 1.2)
+            double xn = 1.23;
+            double xk = 7.23;
+            double dx = 1.2;
+           
+            double[] x = new double[5] {1.88, 2.26, 3.84, 4.55, -6.21 };
+           
+            Console.WriteLine("Задача A:");
+
+            for (double xl = xn; xl < xk; xl+=dx)
             {
-                y = ((Math.Pow((Math.Pow((x - a), 2)), 1/3.0))) + ((((Math.Pow((Math.Abs(x + b)),1 / 5))) / ((Math.Pow(Math.Pow(x,2) - Math.Pow((a+b),2), 1/5.0)))));
-                Console.WriteLine($"На шане {x} функция y= {Math.Round(y,4)}");
+                Console.WriteLine($"Для x = {xl}\t y = {y(xl, a, b)}");
             }
-            Console.ReadKey();
+                Console.WriteLine("Задача B:");
+
+                foreach (double i in x)
+            {
+            Console.WriteLine($"Для x = {i}\t y = {y(i, a, b)}");
+            }
         }
-        
     }
 }
