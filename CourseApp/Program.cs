@@ -1,4 +1,5 @@
 ﻿using System;
+using Menu;
 
 namespace Matan
 {
@@ -6,7 +7,7 @@ namespace Matan
     {
         public static double y(double x, double a, double b)
         {
-            return (Math.Sqrt(Math.Abs(a-b*x)/(Math.Pow(Math.Log10(x),3))));
+            return (Math.Sqrt(Math.Abs(a - b * x) / (Math.Pow(Math.Log10(x), 3))));
         }
 
         static void Main(string[] args)
@@ -20,7 +21,7 @@ namespace Matan
             double[] x = new double[5] { 2.4, 2.8, 3.9, 4.7, 3.16 };
 
             Console.WriteLine("Задача A:");
-         
+
             for (double xl = xn; xl < xk; xl += dx)
             {
                 Console.WriteLine($"Для x = {xl}\t y = {y(xl, a, b):f3}");
@@ -32,6 +33,17 @@ namespace Matan
             {
                 Console.WriteLine($"Для x = {i}\t y = {y(i, a, b):f3}");
             }
+
+            Dish salad = new Dish("Cesar", 500, "Salad", 250); // вызов конструктора с 4 параметрами
+            Dish soup = new Dish("chees", 250);
+
+       
+        
+            salad.GetInfo();
+            soup.GetInfo();
+
+            Console.ReadKey();
+
         }
     }
 }
