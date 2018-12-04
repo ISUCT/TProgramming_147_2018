@@ -17,7 +17,7 @@ namespace CourseApp.Tests
         public void Test2()
          {
                var res = Program.y(-1);
-               Assert.Equal(5.0625, res, 3);
+               Assert.Equal(5.06215, res, 3);
          }
               [Fact]
               public void Test3()
