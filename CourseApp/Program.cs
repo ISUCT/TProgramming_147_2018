@@ -4,12 +4,12 @@ namespace Matan
 {
     public class Program
     {
-        public static double y(double x, double a, double b)
+        public static double Y(double x, double a, double b)
         {
-            return (Math.Acos(Math.Pow(x, 2) - Math.Pow(b, 2)) / Math.Asin(Math.Pow(x, 2) - Math.Pow(a, 2)));
+            return Math.Acos(Math.Pow(x, 2) - Math.Pow(b, 2)) / Math.Asin(Math.Pow(x, 2) - Math.Pow(a, 2));
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             double a = 0.05;
             double b = 0.06;
@@ -20,16 +20,18 @@ namespace Matan
             double[] x = new double[5] { 0.15, 0.26, 0.37, 0.48, 0.56 };
 
             Console.WriteLine("Задача A:");
-            for (double xl = xn; xl < xk; xl+=dx)
+            for (double xl = xn; xl < xk; xl += dx)
             {
-                Console.WriteLine($"Для x = {xl}\t y = {y(xl, a, b)}");
+                Console.WriteLine($"Для x = {xl}\t y = {Y(xl, a, b)}");
             }
 
             Console.WriteLine("Задача B:");
             foreach (double i in x)
             {
-                Console.WriteLine($"Для x = {i}\t y = {y(i, a, b)}");
+                Console.WriteLine($"Для x = {i}\t y = {Y(i, a, b)}");
             }
         }
+
+        private static object Y(int v1, int v2, int v3) => throw new NotImplementedException();
     }
 }

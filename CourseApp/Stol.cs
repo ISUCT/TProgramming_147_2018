@@ -9,11 +9,27 @@ namespace ConsoleApp2
         private string name;
         private int length;
         private int height;
+
+        public Stol(string name, int length, int height)
+        {
+            this.name = name;
+            this.length = length;
+            this.height = height;
+        }
+
+        public Stol(int length, int height)
+        {
+            name = "Noname";
+            this.length = length;
+            this.height = height;
+        }
+
         public string Name
         {
             get => name;
             set => name = value;
         }
+
         public int Height
         {
             get => height;
@@ -25,6 +41,7 @@ namespace ConsoleApp2
                 }
             }
         }
+
         public int Lenght
         {
             get => length;
@@ -36,18 +53,7 @@ namespace ConsoleApp2
                 }
             }
         }
-        public Stol(string name, int length, int height)
-        {
-            this.name = name;
-            this.length = length;
-            this.height = height;
-        }
-        public Stol(int length, int height)
-        {
-            this.name = "Noname" ;
-            this.length = length;
-            this.height = height;
-        }
+
         public string GetInfo()
         {
             return $"Имя: {name}  Длина: {length}  Высота: {height}";
