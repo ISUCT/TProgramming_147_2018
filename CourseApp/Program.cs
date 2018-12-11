@@ -30,6 +30,11 @@ namespace CourseApp
             {
             Console.WriteLine($"Для x = {i}\t y = {y(i, a, b)}");
             }
+        public static void Main(string[] args)
+            {
+            Console.WriteLine("Hello World!");
+            Console.ReadLine();
+            }
         }
     }
 }
