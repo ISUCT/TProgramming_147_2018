@@ -27,14 +27,9 @@ namespace ConsoleApp2
             this.name = "Noname";
             this.age = "age";
         }
-        public void GetInfo() => Console.WriteLine($"Имя: {name} Возраст: {age}");
-        public class Program
-    {
-        public static void Main(string[] args)
+        public void GetInfo()
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
-
+            Console.WriteLine($"Имя: {name} Возраст: {age}");
         }
     }
 }
