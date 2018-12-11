@@ -34,8 +34,9 @@ namespace Matan
                 Console.WriteLine($"Для x = {i}\t y = {y(i, a, b):f3}");
             }
 
-            Dish salad = new Dish("Cesar", 500, "Salad", 250); // вызов конструктора с 4 параметрами
-            Dish soup = new Dish("chees", 250);
+            Dish salad = new Dish("Cesar", 500, "Salad", 250); 
+            Dish soup = new Dish("chees", 250); 
+
 
        
         

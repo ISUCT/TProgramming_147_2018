@@ -15,18 +15,34 @@ namespace Menu
         }
         public int Price
         {
+           
             get => price;
-            set => price = value;
+            set
+            {
+                if (value > 0)
+                {
+                    price = value;
+                }
+                else Console.WriteLine($"Цена не может быть отрицательной");
+            }
+            
         }
         public string Type
         {
-            get => Type;
-            set => Type = value;
+            get => type;
+            set => type = value;
         }
         public int Weight
         {
             get => weight;
-            set => weight = value;
+            set
+            {
+                if (value > 0)
+                {
+                    weight = value;
+                }
+            }
+            
         }
         public Dish(string name, int price, string type, int weight)
         {
