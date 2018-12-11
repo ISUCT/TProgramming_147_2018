@@ -8,14 +8,76 @@ namespace Menu
         private int price;
         private string type;
         private int weight;
+
+        public Dish(string name, int price, string type, int weight)
+        {
+            if (name == $"Cesar")
+            {
+                this.name = name;
+            }
+            else
+            {
+                this.name = $"NoName";
+            }
+
+            if (price >= 0)
+            {
+                this.price = price;
+            }
+            else
+            {
+                this.price = 0;
+            }
+
+            if (type == $"Salad")
+            {
+                this.type = type;
+            }
+            else
+            {
+                this.type = $"NoType";
+            }
+
+            this.type = type;
+            if (weight >= 0)
+            {
+                this.weight = weight;
+            }
+            else
+            {
+                this.weight = 0;
+            }
+        }
+
+        public Dish(string name, int price)
+        {
+            if (name == $"chees")
+            {
+                this.name = name;
+            }
+            else
+            {
+                this.name = $"NoName";
+            }
+
+            if (price >= 0)
+            {
+                this.price = price;
+            }
+            else
+            {
+                this.price = 0;
+            }
+        }
+
         public string Name
         {
             get => name;
             set => name = value;
         }
+
         public int Price
         {
-           
             get => price;
             set
             {
@@ -23,15 +85,15 @@ namespace Menu
                 {
                     price = value;
                 }
-                else Console.WriteLine($"Цена не может быть отрицательной");
-            }
-            
+                           }
         }
+
         public string Type
         {
             get => type;
             set => type = value;
         }
+
         public int Weight
         {
             get => weight;
@@ -41,27 +103,9 @@ namespace Menu
                 {
                     weight = value;
                 }
-            }
-            
+                            }
         }
-        public Dish(string name, int price, string type, int weight)
-        {
-            this.name = name;
-            this.price = price;
-            this.type = type;
-            this.weight = weight;
-        }
-        public Dish(string name, int price)
-        {
-            this.name = name;
-            this.price = price;
-        }
-        public void GetInfo()
-        {
-            Console.WriteLine($"Название: {name}  Цена: {price}   Тип: {type}   Вес: {weight}");
 
-        }
+        public void GetInfo() => Console.WriteLine($"Название: {name}  Цена: {price}   Тип: {type}   Вес: {weight}");
     }
 }
-
-
