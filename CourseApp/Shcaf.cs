@@ -4,32 +4,41 @@ namespace ConsoleApp2
 {
     using System;
 
-    public class Stol : Furniture
+    public class Shcaf : Furniture
     {
         private string name;
         private int length;
         private int height;
+        private string material;
 
-       public Stol(string produced, string name, int length, int height)
-        : base(produced)
+        public Shcaf(string produced, string name, int length, int height, string material)
+         : base(produced)
         {
             this.name = name;
             this.length = length;
             this.height = height;
+            this.material = material;
         }
 
-        public Stol(string produced, int length, int height)
+        public Shcaf(string produced, int length, int height, string material)
             : base(produced)
         {
             name = "Noname";
             this.length = length;
             this.height = height;
+            this.material = material;
         }
 
         public string Name
         {
             get => name;
             set => name = value;
+        }
+
+        public string Material
+        {
+            get => material;
+            set => material = value;
         }
 
         public int Height
@@ -58,7 +67,7 @@ namespace ConsoleApp2
 
         public string GetInfo()
         {
-            return $"Произведенно в : {Produced} Имя: {name}  Длина: {length}  Высота: {height}";
+            return $"Произведенно в:{Produced} Имя:{name} Длина:{length} Высота:{height} Материал:{material}";
         }
     }
 }
