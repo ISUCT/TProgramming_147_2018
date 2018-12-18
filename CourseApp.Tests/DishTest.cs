@@ -36,7 +36,7 @@ namespace CourseApp.Tests
         public void Test4()
         {
             Dish soup = new Dish("Cesar", 20);
-            Assert.Equal("NoName", soup.Name);
+            Assert.Equal("Cesar", soup.Name);
             Assert.Equal(20, soup.Price);
         }
 
@@ -44,10 +44,20 @@ namespace CourseApp.Tests
         public void Test5()
         {
             Dish salad = new Dish("Paprica", 500, "Salad", -3);
-            Assert.Equal("NoName", salad.Name);
+            Assert.Equal("Paprica", salad.Name);
             Assert.Equal(500, salad.Price);
             Assert.Equal("Salad", salad.Type);
             Assert.Equal(0, salad.Weight);
+        }
+
+        [Fact]
+        public void Test6()
+        {
+            Dish salad = new Dish("Cesar", -100, "rrrrrrrrr", 1000);
+            Assert.Equal("Cesar", salad.Name);
+            Assert.Equal(0, salad.Price);
+            Assert.Equal("NoType", salad.Type);
+            Assert.Equal(1000, salad.Weight);
         }
     }
 }

@@ -11,63 +11,15 @@ namespace Menu
 
         public Dish(string name, int price, string type, int weight)
         {
-            if (name == $"Cesar")
-            {
-                this.name = name;
-            }
-            else
-            {
-                this.name = $"NoName";
-            }
-
-            if (price >= 0)
-            {
-                this.price = price;
-            }
-            else
-            {
-                this.price = 0;
-            }
-
-            if (type == $"Salad")
-            {
-                this.type = type;
-            }
-            else
-            {
-                this.type = $"NoType";
-            }
-
-            this.type = type;
-            if (weight >= 0)
-            {
-                this.weight = weight;
-            }
-            else
-            {
-                this.weight = 0;
-            }
+            Name = name == string.Empty ? $"NoName" : name;
+            this.Price = price;
+            this.Type = type;
+            this.Weight = weight;
         }
 
         public Dish(string name, int price)
+            : this(name, price, string.Empty, 0)
         {
-            if (name == $"chees")
-            {
-                this.name = name;
-            }
-            else
-            {
-                this.name = $"NoName";
-            }
-
-            if (price >= 0)
-            {
-                this.price = price;
-            }
-            else
-            {
-                this.price = 0;
-            }
         }
 
         public string Name
@@ -81,17 +33,17 @@ namespace Menu
             get => price;
             set
             {
-                if (value > 0)
-                {
-                    price = value;
-                }
-                           }
+                price = value > 0 ? value : 0;
+            }
         }
 
         public string Type
         {
             get => type;
-            set => type = value;
+            set
+            {
+                type = value == $"Salad" ? value : $"NoType";
+            }
         }
 
         public int Weight
@@ -99,11 +51,8 @@ namespace Menu
             get => weight;
             set
             {
-                if (value > 0)
-                {
-                    weight = value;
-                }
-                            }
+                weight = value > 0 ? value : 0;
+            }
         }
 
         public void GetInfo() => Console.WriteLine($"Название: {name}  Цена: {price}   Тип: {type}   Вес: {weight}");
