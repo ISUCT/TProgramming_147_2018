@@ -2,32 +2,34 @@ using System;
 
 namespace ConsoleApp2
 {
-using System;
-public class Pig
-{
-    private string name;
-    private int age;
-    private int weight;
-    public string Name;
-           public Pig(string name, int age, int weight)
+    public class Pig
+    {
+        private string name;
+        private int age;
+        private int weight;
+
+        public Pig(string name, int age, int weight)
         {
             this.name = name;
             this.age = age;
             this.weight = weight;
         }
+
         public Pig(int age, int weight)
         {
-            this.name = "Noname" ;
+            this.name = "Noname";
             this.age = age;
             this.weight = weight;
         }
-    
-        get => name        
-        set => name = value;
+
+        public string Name
+        {
+            get => name;
+            set => name = value;
         }
-    }
-        public int age
-    {
+
+        public int Age
+        {
             get => age;
             set
             {
@@ -37,7 +39,8 @@ public class Pig
                 }
             }
         }
-        public int weight
+
+        public int Weight
         {
             get => weight;
             set
@@ -54,3 +57,4 @@ public class Pig
             return $"Имя: {Name}  возраст: {age}  вес: {weight}";
         }
     }
+}
