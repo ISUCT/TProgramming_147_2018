@@ -4,12 +4,12 @@ namespace Matan
 {
     public class Program
     {
-        public static double y(double x)
+        public static double Y(double x)
         {
-            return (Math.Pow(Math.Abs(x * x - 2.5), 4.0) + Math.Pow(Math.Log10(x * x), 3.0));
+            return Math.Pow(x: Math.Abs((x * x) - 2.5), y: 4.0) + Math.Pow(Math.Log10(x * x), 3.0);
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             double xn = 1.25;
             double xk = 3.25;
@@ -20,14 +20,14 @@ namespace Matan
             Console.WriteLine("Задача A:");
             for (double xl = xn; xl < xk; xl += dx)
             {
-                Console.WriteLine($"Для x = {xl}\t y = {y(xl)}");
+                Console.WriteLine($"Для x = {xl}\t y = {Y(xl)}");
             }
 
             Console.WriteLine("Задача B:");
 
             foreach (double i in x)
             {
-                Console.WriteLine($"Для x = {i}\t y = {y(i)}");
+                Console.WriteLine($"Для x = {i}\t y = {Y(i)}");
             }
         }
     }
