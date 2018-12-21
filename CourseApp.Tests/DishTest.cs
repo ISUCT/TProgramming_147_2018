@@ -14,23 +14,23 @@ namespace CourseApp.Tests
             Assert.Equal(500, salad.Price);
             Assert.Equal("Salad", salad.Type);
             Assert.Equal(250, salad.Weight);
-                    }
+        }
 
         [Fact]
         public void Test2()
         {
-                        Dish soup = new Dish("chees", 250);
+            Dish soup = new Dish("chees", 250);
             Assert.Equal("chees", soup.Name);
             Assert.Equal(250, soup.Price);
-                    }
+        }
 
         [Fact]
         public void Test3()
         {
-                        Dish soup = new Dish("chees", -3);
-                        Assert.Equal("chees", soup.Name);
-                        Assert.Equal(0, soup.Price);
-                    }
+            Dish soup = new Dish("chees", -3);
+            Assert.Equal("chees", soup.Name);
+            Assert.Equal(0, soup.Price);
+        }
 
         [Fact]
         public void Test4()

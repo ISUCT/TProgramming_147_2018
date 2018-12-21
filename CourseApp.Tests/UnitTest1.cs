@@ -55,7 +55,7 @@ namespace CourseApp.Test
             Assert.Equal(6.38, res, 2);
         }
 
-                [Fact]
+        [Fact]
         public void Test9()
         {
             var res = Program.Y(0, 3, 2);
