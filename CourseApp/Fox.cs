@@ -11,40 +11,10 @@ namespace Fauna
 
         public Fox(string gender, string color, int weight, int growth)
         {
-            if (gender == $"Male")
-                {
-                Gender = gender;
-                }
-                else if (gender == $"Female")
-                {
-                    Gender = gender;
-                }
-                else
-                {
-                    Gender = $"Unknow";
-                }
-            if (color == $"White")
-            {
-                Color = color;
-            }
-            else if (color == $"Blond")
-            {
-                Color = color;
-            }
-            else if (color == $"Red")
 
-            {
-                Color = color;
-            }
-            else if (color == string.Empty)
-            {
-                Color = $"UnknowColor";
-            }
-            else
-            {
-                Color = $"UnknowColor";
-            }
-                       
+
+            this.Gender = gender;
+            this.Color = color;
             this.Weight = weight;
             this.Growth = growth;
         }
@@ -57,14 +27,54 @@ namespace Fauna
         public string Gender
         {
             get => gender;
-            set => gender = value;        
-            
+            set
+                {
+                if (value == $"Male")
+                {
+                    gender = value;
+                }
+                else if (value == $"Female")
+                {
+                    gender = value;
+                }
+                else
+                {
+                    gender = $"Unknow";
+                }
+
+            }
+         
+
         }
 
         public string Color
         {
             get => color;
-            set => color = value;
+            set
+            {
+                if (value == $"White")
+                {
+                    color = value;
+                }
+                else if (value == $"Blond")
+                {
+                    color = value;
+                }
+                else if (value == $"Red")
+
+                {
+                    color = value;
+                }
+                else if (value == string.Empty)
+                {
+                    color = $"UnknowColor";
+                }
+                else
+                {
+                    color = $"UnknowColor";
+                }
+
+            }
         }
 
         public int Weight
