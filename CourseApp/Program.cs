@@ -31,7 +31,5 @@ namespace Matan
                 Console.WriteLine($"Для x = {i}\t y = {Y(i, a, b)}");
             }
         }
-
-        private static object Y(int v1, int v2, int v3) => throw new NotImplementedException();
     }
 }

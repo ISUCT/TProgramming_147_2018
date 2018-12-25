@@ -7,25 +7,12 @@ namespace CourseApp.Tests
     public class UnitTest2
     {
         [Fact]
-        public void CheckFirdKonstruktor()
-        {
-            Shcaf shcaf1 = new Shcaf("Russia", 160, 230, "Металл)");
-            Assert.Equal("Russia", shcaf1.Produced);
-            Assert.Equal("Noname", shcaf1.Name);
-            Assert.Equal(160, shcaf1.Lenght);
-            Assert.Equal(230, shcaf1.Height);
-            Assert.Equal("Металл)", shcaf1.Material);
-        }
-
-        [Fact]
         public void Check4Konstruktor()
         {
-            Shcaf shcaf1 = new Shcaf("Russia", "Shcafishe", 160, 230, "дуб");
+            Shcaf shcaf1 = new Shcaf("Russia", "Shcafishe", "дуб");
             Assert.Equal("Russia", shcaf1.Produced);
             Assert.Equal(9, shcaf1.Name.Length);
             Assert.Equal("Shcafishe", shcaf1.Name);
-            Assert.Equal(160, shcaf1.Lenght);
-            Assert.Equal(230, shcaf1.Height);
             Assert.Equal("дуб", shcaf1.Material);
         }
 
@@ -119,6 +106,7 @@ namespace CourseApp.Tests
         public void CheckGetinfo1()
         {
             Stol stol1 = new Stol("Russia", "Supastol", 160, 200);
+            var tmp1 = stol1.ToString();
             var exp = "Произведенно в : Russia Имя: Supastol  Длина: 160  Высота: 200";
             Assert.Equal(exp, stol1.GetInfo());
         }
@@ -126,8 +114,9 @@ namespace CourseApp.Tests
         [Fact]
         public void CheckGetinfo2()
         {
-            Shcaf shcaf1 = new Shcaf("Russia", "Supastol", 160, 200, "береза");
-            var exp = "Произведенно в:Russia Имя:Supastol Длина:160 Высота:200 Материал:береза";
+            Shcaf shcaf1 = new Shcaf("Russia", "Supastol", "береза");
+            var tmp = shcaf1.ToString();
+            var exp = "Произведенно в:Russia Имя:Supastol Материал:береза";
             Assert.Equal(exp, shcaf1.GetInfo());
         }
     }

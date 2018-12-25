@@ -6,59 +6,37 @@ namespace ConsoleApp2
 
     public class Stol : Furniture
     {
-        private string name;
-        private int length;
-        private int height;
-
-       public Stol(string produced, string name, int length, int height)
-        : base(produced)
+        public Stol()
         {
-            this.name = name;
-            this.length = length;
-            this.height = height;
+            Name = "chto-to";
+            Produced = "Russia";
+        }
+
+        public Stol(string produced, string name, int length, int height)
+        : base(produced, name)
+        {
+            Name = name;
+            Lenght = length;
+            Height = height;
         }
 
         public Stol(string produced, int length, int height)
             : base(produced)
         {
-            name = "Noname";
-            this.length = length;
-            this.height = height;
+            Lenght = length;
+            Height = height;
         }
 
-        public string Name
+        public Stol(int length, int height)
+           : base()
         {
-            get => name;
-            set => name = value;
+            Lenght = 200;
+            Height = 100;
         }
 
-        public int Height
+        public override string GetInfo()
         {
-            get => height;
-            set
-            {
-                if (value > 0)
-                {
-                    height = value;
-                }
-            }
-        }
-
-        public int Lenght
-        {
-            get => length;
-            set
-            {
-                if (value > 0)
-                {
-                    length = value;
-                }
-            }
-        }
-
-        public string GetInfo()
-        {
-            return $"Произведенно в : {Produced} Имя: {name}  Длина: {length}  Высота: {height}";
+            return $"Произведенно в : {Produced} Имя: {Name}  Длина: {Lenght}  Высота: {Height}";
         }
     }
 }

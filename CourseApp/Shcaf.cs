@@ -6,68 +6,28 @@ namespace ConsoleApp2
 
     public class Shcaf : Furniture
     {
-        private string name;
-        private int length;
-        private int height;
-        private string material;
-
-        public Shcaf(string produced, string name, int length, int height, string material)
-         : base(produced)
+        public Shcaf()
         {
-            this.name = name;
-            this.length = length;
-            this.height = height;
-            this.material = material;
+            Produced = "Russia";
+            Name = "chto-to";
         }
 
-        public Shcaf(string produced, int length, int height, string material)
-            : base(produced)
+        public Shcaf(string produced, string name, string material)
+         : base(produced, name)
         {
-            name = "Noname";
-            this.length = length;
-            this.height = height;
-            this.material = material;
+            Material = material;
         }
 
-        public string Name
+        public Shcaf(string produced, string material)
+        : base(produced)
         {
-            get => name;
-            set => name = value;
+            Produced = produced;
+            Material = material;
         }
 
-        public string Material
+        public override string GetInfo()
         {
-            get => material;
-            set => material = value;
-        }
-
-        public int Height
-        {
-            get => height;
-            set
-            {
-                if (value > 0)
-                {
-                    height = value;
-                }
-            }
-        }
-
-        public int Lenght
-        {
-            get => length;
-            set
-            {
-                if (value > 0)
-                {
-                    length = value;
-                }
-            }
-        }
-
-        public string GetInfo()
-        {
-            return $"Произведенно в:{Produced} Имя:{name} Длина:{length} Высота:{height} Материал:{material}";
+            return $"Произведенно в:{Produced} Имя:{Name} Материал:{Material}";
         }
     }
 }
