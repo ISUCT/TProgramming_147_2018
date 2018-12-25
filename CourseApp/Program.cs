@@ -1,6 +1,10 @@
-﻿using System;
+using System;
 using Fauna;
 namespace Matem
+
+
+namespace Matem
+
 
 {
     public class Program
@@ -35,12 +39,14 @@ namespace Matem
                 Console.WriteLine($"Для x = {i}\t y = {y(i, a, b)}");
             }
 
+
             Fox africa = new Fox($"Male", $"White", 25, 30);
             Fox europe = new Fox($"Female", 15);
             africa.GetInfo();
             europe.GetInfo();
 
             Console.ReadKey();
+
         }
     }
 }
