@@ -1,6 +1,5 @@
 using System;
 using Fauna;
-namespace Matem
 
 
 namespace Matem
