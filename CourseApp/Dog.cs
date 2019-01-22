@@ -8,8 +8,7 @@ namespace ConsoleApp1
     {
         public Dog()
         {
-            Name = "Rex";
-            Breed = "German Shepherd";
+            Color = "Black";
             Age = 1;
         }
 

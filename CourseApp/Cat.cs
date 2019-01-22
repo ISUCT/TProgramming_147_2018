@@ -8,9 +8,8 @@ namespace ConsoleApp1
     {
         public Cat()
         {
-            Breed = "Maine coon";
-            Name = "Fufik";
-            Color = "Red";
+            Color = "Black";
+            Age = 1;
         }
 
         public Cat(string breed, string name, string color)

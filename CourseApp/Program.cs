@@ -39,11 +39,6 @@ namespace ConsoleApp5
             {
                 Console.WriteLine($"Для x = {x[i]}\t y = {y(x[i], a, b)}");
             }
-          
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-            Console.ReadLine();
         }
     }
 }
