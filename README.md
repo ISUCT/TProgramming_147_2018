@@ -1,3 +1,3 @@
 # Course of c#
 
-Nikoalaj_Korolev
+Nikolaj_Korolev
