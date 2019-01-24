@@ -9,49 +9,56 @@ namespace CourseApp.Tests
         [Fact]
         public void Test1()
         {
-            var res = Program.y(1, 1, 0);
-            Assert.Equal(Double.NaN, res);            
+            var res = Program.Y(1, 1, (double)0);
+            Assert.Equal(double.NaN, res);
         }
+
         [Fact]
         public void Test2()
         {
-            var res = Program.y(1, 0, 1);
+            var res = Program.Y(1, 0, (double)1);
             Assert.Equal(1, res);
         }
+
         [Fact]
         public void Test3()
         {
-            var res = Program.y(0, 0, 0);
-            Assert.Equal(Double.PositiveInfinity, res);
+            var res = Program.Y(0, 0, (double)0);
+            Assert.Equal(double.PositiveInfinity, res);
         }
+
         [Fact]
         public void Test4()
         {
-            var res = Program.y(1, 0, 0);
+            var res = Program.Y(1, 0, (double)0);
             Assert.Equal(0, res);
         }
+
         [Fact]
         public void Test5()
         {
-            var res = Program.y(1, 1, 1);
-            Assert.Equal(Double.PositiveInfinity, res);
+            var res = Program.Y(1, 1, (double)1);
+            Assert.Equal(double.PositiveInfinity, res);
         }
+
         [Fact]
         public void Test6()
         {
-            var res = Program.y(0, 1, 1);
+            var res = Program.Y(0, 1, (double)1);
             Assert.Equal(-2, res);
         }
+
         [Fact]
         public void Test7()
         {
-            var res = Program.y(0, 0, 1);
-            Assert.Equal(Double.PositiveInfinity, res);
+            var res = Program.Y(0, 0, (double)1);
+            Assert.Equal(double.PositiveInfinity, res);
         }
+
         [Fact]
         public void Test8()
         {
-            var res = Program.y(0, 1, 0);
+            var res = Program.Y(0, 1, (double)0);
             Assert.Equal(-1, res);
         }
     }
