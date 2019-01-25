@@ -1,7 +1,7 @@
 ﻿using System;
 using CourseApp;
 
-namespace CourseApp
+namespace laba2
 {
     public class Program
     {
@@ -39,5 +39,6 @@ namespace CourseApp
 
             Console.ReadKey();
         }
+
     }
 }
