@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ConsoleApp2
+﻿namespace ConsoleApp2
 {
     using System;
 
@@ -10,6 +8,11 @@ namespace ConsoleApp2
         {
             Name = "chto-to";
             Produced = "Russia";
+        }
+
+        public Stol(string name)
+        {
+            Name = name;
         }
 
         public Stol(string produced, string name, int length, int height)
@@ -37,6 +40,11 @@ namespace ConsoleApp2
         public override string GetInfo()
         {
             return $"Произведенно в : {Produced} Имя: {Name}  Длина: {Lenght}  Высота: {Height}";
+        }
+
+        public override string Mebel()
+        {
+            return "Stol";
         }
     }
 }
