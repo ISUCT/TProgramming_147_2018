@@ -12,6 +12,11 @@ namespace ConsoleApp2
             Name = "chto-to";
         }
 
+        public Shcaf(string name)
+        {
+            Name = name;
+        }
+
         public Shcaf(string produced, string name, string material)
          : base(produced, name)
         {
@@ -28,6 +33,11 @@ namespace ConsoleApp2
         public override string GetInfo()
         {
             return $"Произведенно в:{Produced} Имя:{Name} Материал:{Material}";
+        }
+
+        public override string Mebel()
+        {
+            return "Shcaf";
         }
     }
 }

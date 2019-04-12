@@ -4,7 +4,7 @@ namespace ConsoleApp2
 {
     using System;
 
-    public abstract class Furniture
+    public abstract partial class Furniture : IComparable<Furniture>, IPrint
     {
         private string produced;
         private string name;
@@ -64,5 +64,20 @@ namespace ConsoleApp2
         }
 
         public abstract string GetInfo();
+
+        public int CompareTo(Furniture other)
+        {
+            return Name.CompareTo(other.Name);
+        }
+
+        public virtual string Mebel()
+        {
+            return "Ya mebel'";
+        }
+
+        public int Ploshad()
+        {
+            return height * length;
+        }
     }
 }
